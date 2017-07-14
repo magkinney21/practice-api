@@ -2,14 +2,24 @@
   "name": "practice-api",
   "version": "0.0.1",
   "private": true,
+  "main": "lib",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "watch": "nodemon -- -r babel-register src",
+    "build": "babel src -d lib",
+    "start": "node ."
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-import": "^2.6.1",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "nodemon": "^1.11.0"
   }
 }
